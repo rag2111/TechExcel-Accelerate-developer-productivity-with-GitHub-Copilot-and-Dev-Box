@@ -29,10 +29,12 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         enable-AzPSSession: true
 
-    - name: log secrets
+    - name: log secrets 1
       run: echo ${{ secrets.AZURE_RG }}
+
+    - name: log secrets 2
       run: echo ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      
+
       # Deploy ARM template
     - name: Run ARM deploy
       uses: azure/arm-deploy@v1
